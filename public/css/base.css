@@ -1,0 +1,278 @@
+body {
+  background: url(../images/BG.gif);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+code {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-family: "Bitstream Vera Sans Mono", Consolas, Courier, monospace;
+  font-size: 12px;
+  margin: 0 2px;
+  padding: 0px 5px;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+  color: #fff;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+p, ul {
+  margin: 15px 0;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+.masterBox {
+  text-align: center;
+}
+
+.wrapperBox {
+  position: relative;
+  text-align: center;
+  width: 150px;
+  height: 370px;
+  margin: 0 auto;
+}
+
+.hatBox {
+  height: 60px;
+  padding: 30px 0 45px;
+}
+
+.hat.napkin,
+.hat.spoon,
+.hat.fork,
+.hat.knife {
+  position: absolute;
+  z-index: 3;
+}
+
+/*=================
+ * WITCH
+ =================*/
+.witch .hat.napkin {
+  top: 115px;
+  left: 0px;
+  -ms-transform: rotate(-25deg); /* IE 9 */
+  -webkit-transform: rotate(-25deg); /* Safari */
+  transform: rotate(-25deg);
+}
+
+.witch .hat.spoon {
+  top: 150px;
+  left: 20px;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+
+.witch .hat.fork {
+  top: 155px;
+  left: 44px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+  transform: rotate(-45deg);
+}
+
+.witch .hat.knife {
+  top: 135px;
+  right: 15px;
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Safari */
+  transform: rotate(-15deg);
+}
+
+/*=================
+ * CAP
+ =================*/
+.cap .hat.napkin {
+  top: 115px;
+  left: 0px;
+  -ms-transform: rotate(-25deg); /* IE 9 */
+  -webkit-transform: rotate(-25deg); /* Safari */
+  transform: rotate(-25deg);
+}
+
+.cap .hat.spoon {
+  top: 150px;
+  left: 20px;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+
+.cap .hat.fork {
+  top: 155px;
+  left: 44px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+  transform: rotate(-45deg);
+}
+
+.cap .hat.knife {
+  top: 135px;
+  right: 15px;
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Safari */
+  transform: rotate(-15deg);
+}
+
+/*=================
+ * TOP HAT
+ =================*/
+.top .hat.napkin {
+  top: 115px;
+  left: 0px;
+  -ms-transform: rotate(-25deg); /* IE 9 */
+  -webkit-transform: rotate(-25deg); /* Safari */
+  transform: rotate(-25deg);
+}
+
+.top .hat.spoon {
+  top: 150px;
+  left: 20px;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+
+.top .hat.fork {
+  top: 155px;
+  left: 44px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+  transform: rotate(-45deg);
+}
+
+.top .hat.knife {
+  top: 135px;
+  right: 15px;
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Safari */
+  transform: rotate(-15deg);
+}
+
+/*=================
+ * LADY HAT
+ =================*/
+.lady .hat.napkin {
+  top: 115px;
+  left: 0px;
+  -ms-transform: rotate(-25deg); /* IE 9 */
+  -webkit-transform: rotate(-25deg); /* Safari */
+  transform: rotate(-25deg);
+}
+
+.lady .hat.spoon {
+  top: 150px;
+  left: 20px;
+  -ms-transform: rotate(5deg); /* IE 9 */
+  -webkit-transform: rotate(5deg); /* Safari */
+  transform: rotate(5deg);
+}
+
+.lady .hat.fork {
+  top: 155px;
+  left: 44px;
+  -ms-transform: rotate(-45deg); /* IE 9 */
+  -webkit-transform: rotate(-45deg); /* Safari */
+  transform: rotate(-45deg);
+}
+
+.lady .hat.knife {
+  top: 135px;
+  right: 15px;
+  -ms-transform: rotate(-15deg); /* IE 9 */
+  -webkit-transform: rotate(-15deg); /* Safari */
+  transform: rotate(-15deg);
+}
+
+/*=================
+ * ITEMS
+ =================*/
+.item.napkin:hover,
+.item.spoon:hover,
+.item.fork:hover,
+.item.knife:hover {
+  opacity: 0.75;
+}
+
+.item.napkin {
+  margin: 0 auto;
+}
+
+.item.spoon,
+.item.fork,
+.item.knife {
+  position: absolute;
+  top: 0;
+}
+
+.item.spoon {
+  top: 46px;
+  left: 32px;
+}
+
+.item.fork {
+  top: 48px;
+  left: 70px;
+}
+
+.item.knife {
+  top: 32px;
+  right: 24px;
+}
+
+
+/*=================
+ * NEXT BUTTON
+ =================*/
+.nextButton {
+  color: #FFF;
+  cursor: pointer;
+}
+
+.nextButton.hide {
+  display: none;
+}
+
+.nextButton.show {
+  display: block;
+}
