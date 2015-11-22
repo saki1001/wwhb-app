@@ -24,28 +24,28 @@
 
 var index = 0;
 
-var masterData = {
-  0: {
+var masterData = [
+  {
     hat: {id: 1, name: "Witch", image: "WITCH-HAT.gif"},
     q: 'Who Wears Hat Best?',
     a: 'Napkin'
   },
-  1: {
+  {
     hat: {id: 2, name: "Cap", image: "CAP.gif"},
     q: 'Who Wears Hat Best? Round 2',
     a: 'Spoon'
   },
-  2: {
+  {
     hat: {id: 3, name: "Top", image: "TOP-HAT.gif"},
     q: 'Who Wears Hat Best? Round 3',
     a: 'Fork'
   },
-  3: {
+  {
     hat: {id: 4, name: "Lady", image: "LADY-HAT.gif"},
     q: 'Who Wears Hat Best? Round 4',
     a: 'Knife'
   }
-};
+];
 
 var data = masterData[index];
 
@@ -73,10 +73,16 @@ var NextButton = React.createClass({
     return {data: data, choice: ''};
   },
   handleButtonClick: function() {
-    index++;
-    data = masterData[index];
-    this.props.onNextClick({data: data, choice: ''});
-    this.setState({data: data, choice: ''});
+    console.log(masterData.length);
+    if(index < masterData.length - 1) {
+      index++;
+      data = masterData[index];
+      this.props.onNextClick({data: data, choice: ''});
+      this.setState({data: data, choice: ''});
+    } else {
+      console.log('the end');
+      window.location = 'end.html';
+    }
   },
   render: function() {
     var answer = this.props.data.a;
