@@ -1,6 +1,7 @@
 body {
   background: url(../images/BG.gif);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: 'Source Sans Pro', sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 15px;
   line-height: 1.7;
   margin: 0;
@@ -73,7 +74,7 @@ ul {
 
 .hatBox {
   height: 60px;
-  padding: 30px 0 45px;
+  padding: 25px 0 30px;
 }
 
 .hat.napkin,
@@ -88,7 +89,7 @@ ul {
  * WITCH
  =================*/
 .witch .hat.napkin {
-  top: 115px;
+  top: 98px;
   left: 0px;
   -ms-transform: rotate(-25deg); /* IE 9 */
   -webkit-transform: rotate(-25deg); /* Safari */
@@ -97,7 +98,7 @@ ul {
 
 .witch .hat.spoon {
   top: 150px;
-  left: 20px;
+  left: 16px;
   -ms-transform: rotate(5deg); /* IE 9 */
   -webkit-transform: rotate(5deg); /* Safari */
   transform: rotate(5deg);
@@ -105,14 +106,14 @@ ul {
 
 .witch .hat.fork {
   top: 155px;
-  left: 44px;
+  left: 42px;
   -ms-transform: rotate(-45deg); /* IE 9 */
   -webkit-transform: rotate(-45deg); /* Safari */
   transform: rotate(-45deg);
 }
 
 .witch .hat.knife {
-  top: 135px;
+  top: 138px;
   right: 15px;
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
@@ -125,33 +126,36 @@ ul {
 .cap .hat.napkin {
   top: 115px;
   left: 0px;
-  -ms-transform: rotate(-25deg); /* IE 9 */
-  -webkit-transform: rotate(-25deg); /* Safari */
-  transform: rotate(-25deg);
+  /*-moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";*/
+  -ms-transform: rotate(-25deg) scaleX(-1); /* IE 9 */
+  -webkit-transform: rotate(-25deg) scaleX(-1); /* Safari */
+  transform: rotate(-25deg) scaleX(-1);
 }
 
 .cap .hat.spoon {
-  top: 150px;
-  left: 20px;
-  -ms-transform: rotate(5deg); /* IE 9 */
-  -webkit-transform: rotate(5deg); /* Safari */
-  transform: rotate(5deg);
+  top: 180px;
+  left: 26px;
 }
 
 .cap .hat.fork {
-  top: 155px;
-  left: 44px;
-  -ms-transform: rotate(-45deg); /* IE 9 */
-  -webkit-transform: rotate(-45deg); /* Safari */
-  transform: rotate(-45deg);
+  top: 172px;
+  left: 67px;
+  -ms-transform: rotate(15deg); /* IE 9 */
+  -webkit-transform: rotate(15deg); /* Safari */
+  transform: rotate(15deg);
 }
 
 .cap .hat.knife {
-  top: 135px;
-  right: 15px;
-  -ms-transform: rotate(-15deg); /* IE 9 */
-  -webkit-transform: rotate(-15deg); /* Safari */
-  transform: rotate(-15deg);
+  top: 165px;
+  right: 8px;
+  -ms-transform: rotate(25deg); /* IE 9 */
+  -webkit-transform: rotate(25deg); /* Safari */
+  transform: rotate(25deg);
 }
 
 /*=================
@@ -160,78 +164,100 @@ ul {
 .top .hat.napkin {
   top: 115px;
   left: 0px;
-  -ms-transform: rotate(-25deg); /* IE 9 */
-  -webkit-transform: rotate(-25deg); /* Safari */
-  transform: rotate(-25deg);
-}
-
-.top .hat.spoon {
-  top: 150px;
-  left: 20px;
-  -ms-transform: rotate(5deg); /* IE 9 */
-  -webkit-transform: rotate(5deg); /* Safari */
-  transform: rotate(5deg);
-}
-
-.top .hat.fork {
-  top: 155px;
-  left: 44px;
   -ms-transform: rotate(-45deg); /* IE 9 */
   -webkit-transform: rotate(-45deg); /* Safari */
   transform: rotate(-45deg);
 }
 
+.top .hat.spoon {
+  top: 170px;
+  left: 20px;
+  -ms-transform: rotate(25deg); /* IE 9 */
+  -webkit-transform: rotate(25deg); /* Safari */
+  transform: rotate(25deg);
+}
+
+.top .hat.fork {
+  top: 162px;
+  left: 57px;
+}
+
 .top .hat.knife {
-  top: 135px;
-  right: 15px;
-  -ms-transform: rotate(-15deg); /* IE 9 */
-  -webkit-transform: rotate(-15deg); /* Safari */
-  transform: rotate(-15deg);
+  top: 155px;
+  right: 5px;
+  -ms-transform: rotate(35deg); /* IE 9 */
+  -webkit-transform: rotate(35deg); /* Safari */
+  transform: rotate(35deg);
 }
 
 /*=================
  * LADY HAT
  =================*/
 .lady .hat.napkin {
-  top: 115px;
-  left: 0px;
-  -ms-transform: rotate(-25deg); /* IE 9 */
-  -webkit-transform: rotate(-25deg); /* Safari */
-  transform: rotate(-25deg);
+  top: 103px;
+  left: 25px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Safari */
+  transform: rotate(45deg);
 }
 
 .lady .hat.spoon {
-  top: 150px;
-  left: 20px;
-  -ms-transform: rotate(5deg); /* IE 9 */
-  -webkit-transform: rotate(5deg); /* Safari */
-  transform: rotate(5deg);
-}
-
-.lady .hat.fork {
-  top: 155px;
-  left: 44px;
-  -ms-transform: rotate(-45deg); /* IE 9 */
-  -webkit-transform: rotate(-45deg); /* Safari */
-  transform: rotate(-45deg);
-}
-
-.lady .hat.knife {
-  top: 135px;
-  right: 15px;
+  top: 160px;
+  left: 22px;
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
   transform: rotate(-15deg);
 }
 
+.lady .hat.fork {
+  top: 160px;
+  left: 54px;
+  -ms-transform: rotate(-35deg); /* IE 9 */
+  -webkit-transform: rotate(-35deg); /* Safari */
+  transform: rotate(-35deg);
+}
+
+.lady .hat.knife {
+  top: 155px;
+  right: 7px;
+}
+
 /*=================
  * ITEMS
  =================*/
-.item.napkin:hover,
-.item.spoon:hover,
-.item.fork:hover,
+.item {
+  color: black;
+  textAlign: center;
+  cursor: pointer;
+}
+
+.itemChoice {
+  width: 100%;
+  textAlign: center;
+  'float': none;
+  'clear': both;
+}
+
+.itemBox {
+  position: relative;
+  width: 117px;
+  margin: 0 auto;
+}
+
+.item.napkin:hover {
+  background: url(../images/NAPKIN-SHADOW.gif) no-repeat 0 0;
+}
+
+.item.spoon:hover {
+  background: url(../images/SPOON-SHADOW.gif) no-repeat 0 0;
+}
+
+.item.fork:hover {
+  background: url(../images/FORK-SHADOW.gif) no-repeat 0 0;
+}
+
 .item.knife:hover {
-  opacity: 0.75;
+  background: url(../images/KNIFE-SHADOW.gif) no-repeat 0 0;
 }
 
 .item.napkin {
@@ -246,18 +272,18 @@ ul {
 }
 
 .item.spoon {
-  top: 46px;
-  left: 32px;
+  top: 27%;
+  left: 7%;
 }
 
 .item.fork {
-  top: 48px;
-  left: 70px;
+  top: 29%;
+  left: 42%;
 }
 
 .item.knife {
-  top: 32px;
-  right: 24px;
+  top: 22%;
+  left: 71%;
 }
 
 
