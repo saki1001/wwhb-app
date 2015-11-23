@@ -61,6 +61,8 @@ var MasterBox = React.createClass({
             <Item name="Napkin" image="NAPKIN-2.gif" />
           </div>
         </div>
+        <h4>Game concept and illustrations by Taylor Shields</h4>
+        <h4>Built by Saki Sato</h4>
       </div>
     );
   }

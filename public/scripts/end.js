@@ -67,6 +67,8 @@ var MasterBox = React.createClass({
           </div>
         </div>
         <NextButton />
+        <h4>Game concept and illustrations by Taylor Shields</h4>
+        <h4>Built by Saki Sato</h4>
       </div>
     );
   }
