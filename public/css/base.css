@@ -29,6 +29,7 @@ code {
 
 h1, h2, h3, h4 {
   font-weight: normal;
+  line-height: 1.2;
   color: #fff;
   margin: 0 0 15px;
   padding: 0;
@@ -73,7 +74,7 @@ ul {
 }
 
 .hatBox {
-  height: 60px;
+  height: 40px;
   padding: 25px 0 30px;
 }
 
@@ -89,7 +90,7 @@ ul {
  * WITCH
  =================*/
 .witch .hat.napkin {
-  top: 98px;
+  top: 78px;
   left: 0px;
   -ms-transform: rotate(-25deg); /* IE 9 */
   -webkit-transform: rotate(-25deg); /* Safari */
@@ -97,7 +98,7 @@ ul {
 }
 
 .witch .hat.spoon {
-  top: 150px;
+  top: 130px;
   left: 16px;
   -ms-transform: rotate(5deg); /* IE 9 */
   -webkit-transform: rotate(5deg); /* Safari */
@@ -105,7 +106,7 @@ ul {
 }
 
 .witch .hat.fork {
-  top: 155px;
+  top: 135px;
   left: 42px;
   -ms-transform: rotate(-45deg); /* IE 9 */
   -webkit-transform: rotate(-45deg); /* Safari */
@@ -113,7 +114,7 @@ ul {
 }
 
 .witch .hat.knife {
-  top: 138px;
+  top: 118px;
   right: 15px;
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
@@ -124,26 +125,20 @@ ul {
  * CAP
  =================*/
 .cap .hat.napkin {
-  top: 115px;
+  top: 95px;
   left: 0px;
-  /*-moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";*/
   -ms-transform: rotate(-25deg) scaleX(-1); /* IE 9 */
   -webkit-transform: rotate(-25deg) scaleX(-1); /* Safari */
   transform: rotate(-25deg) scaleX(-1);
 }
 
 .cap .hat.spoon {
-  top: 180px;
+  top: 160px;
   left: 26px;
 }
 
 .cap .hat.fork {
-  top: 172px;
+  top: 152px;
   left: 67px;
   -ms-transform: rotate(15deg); /* IE 9 */
   -webkit-transform: rotate(15deg); /* Safari */
@@ -151,7 +146,7 @@ ul {
 }
 
 .cap .hat.knife {
-  top: 165px;
+  top: 145px;
   right: 8px;
   -ms-transform: rotate(25deg); /* IE 9 */
   -webkit-transform: rotate(25deg); /* Safari */
@@ -162,7 +157,7 @@ ul {
  * TOP HAT
  =================*/
 .top .hat.napkin {
-  top: 115px;
+  top: 95px;
   left: 0px;
   -ms-transform: rotate(-45deg); /* IE 9 */
   -webkit-transform: rotate(-45deg); /* Safari */
@@ -170,7 +165,7 @@ ul {
 }
 
 .top .hat.spoon {
-  top: 170px;
+  top: 150px;
   left: 20px;
   -ms-transform: rotate(25deg); /* IE 9 */
   -webkit-transform: rotate(25deg); /* Safari */
@@ -178,12 +173,12 @@ ul {
 }
 
 .top .hat.fork {
-  top: 162px;
+  top: 142px;
   left: 56px;
 }
 
 .top .hat.knife {
-  top: 155px;
+  top: 135px;
   right: 5px;
   -ms-transform: rotate(35deg); /* IE 9 */
   -webkit-transform: rotate(35deg); /* Safari */
@@ -194,7 +189,7 @@ ul {
  * LADY HAT
  =================*/
 .lady .hat.napkin {
-  top: 103px;
+  top: 83px;
   left: 25px;
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Safari */
@@ -202,7 +197,7 @@ ul {
 }
 
 .lady .hat.spoon {
-  top: 160px;
+  top: 140px;
   left: 22px;
   -ms-transform: rotate(-15deg); /* IE 9 */
   -webkit-transform: rotate(-15deg); /* Safari */
@@ -210,7 +205,7 @@ ul {
 }
 
 .lady .hat.fork {
-  top: 160px;
+  top: 140px;
   left: 54px;
   -ms-transform: rotate(-35deg); /* IE 9 */
   -webkit-transform: rotate(-35deg); /* Safari */
@@ -218,7 +213,7 @@ ul {
 }
 
 .lady .hat.knife {
-  top: 155px;
+  top: 135px;
   right: 7px;
 }
 

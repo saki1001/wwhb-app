@@ -1,3 +1,7 @@
+var wrapperBoxStyle = {
+  height: '320px'
+};
+
 var hatBoxStyle = {
   height: '0',
   padding: '0',
@@ -7,7 +11,7 @@ var hatBoxStyle = {
 
 var itemBoxStyle = {
   position: 'relative',
-  top: '60px'
+  top: '40px'
 };
 
 var HatBox = React.createClass({
@@ -54,7 +58,7 @@ var MasterBox = React.createClass({
       <div className="masterBox">
         <h1>Good Job!</h1>
         <h2>Let&rsquo;s go to the party.</h2>
-        <div className="wrapperBox">
+        <div className="wrapperBox" style={wrapperBoxStyle} >
           <HatBox name="Witch" item="Napkin" image="WITCH-HAT.gif" />
           <HatBox name="Cap" item="Spoon" image="CAP.gif" />
           <HatBox name="Top" item="Fork" image="TOP-HAT.gif" />
