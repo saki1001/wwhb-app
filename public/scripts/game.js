@@ -1,26 +1,10 @@
 /**
- * This file provided by Facebook is for non-commercial testing and evaluation
- * purposes only. Facebook reserves all rights not expressly granted.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- * FACEBOOK BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
- * ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
- * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * TODO:
+ * - radomize data, preserve through refresh
+ * - create a router instead of redirecting to new pages
+ * - create user sessions, scores?
+ * 
  */
-
-// var data = {
-//   items: [
-//     {id: 1, name: "Napkin", image: "NAPKIN.gif"},
-//     {id: 2, name: "Spoon", image: "SPOON.gif"},
-//     {id: 3, name: "Fork", image: "FORK.gif"},
-//     {id: 4, name: "Knife", image: "KNIFE.gif"}
-//   ],
-//   hats: [
-//     {id: 1, name: "Witchy", image: "WITCH-HAT.gif"}
-//   ]
-// };
 
 var index = 0;
 
@@ -32,51 +16,71 @@ var masterData = [
   },
   {
     hat: {id: 2, name: "Cap", image: "CAP.gif"},
-    q: 'Who Wears Hat Best? Round 2',
+    q: 'Who Wears Hat Best?',
     a: 'Spoon'
   },
   {
     hat: {id: 3, name: "Top", image: "TOP-HAT.gif"},
-    q: 'Who Wears Hat Best? Round 3',
+    q: 'Who Wears Hat Best?',
     a: 'Fork'
   },
   {
     hat: {id: 4, name: "Lady", image: "LADY-HAT.gif"},
-    q: 'Who Wears Hat Best? Round 4',
+    q: 'Who Wears Hat Best?',
     a: 'Knife'
   }
 ];
 
-var data = masterData[index];
+var shuffle = function(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
 
-var itemStyle = {
-  color: 'black',
-  textAlign: 'center',
-  cursor: 'pointer'
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  console.log(data);
+  // Set randomized data
+  data = array[index];
+  console.log(data);
+  return array;
 };
 
-var itemListStyle = {
-  position: 'relative',
-  width: '150px',
-  margin: '0 auto'
-};
+var data;
+if (window.location.hash) {
+  var questionID = window.location.hash.split('#')[1];
+  index = questionID;
+  console.log('get hash');
+  console.log(questionID);
+  data = masterData[questionID];
+} else {
+  // Get randomized data
+  // Figure out how to preserve random data through hash
+  // shuffle(masterData);
+  data = masterData[index];
+}
 
-var itemChoiceStyle = {
-  width: '100%',
-  textAlign: 'center',
-  'float': 'none',
-  'clear': 'both'
-};
 
 var NextButton = React.createClass({
   getInitialState: function() {
     return {data: data, choice: ''};
   },
   handleButtonClick: function() {
-    console.log(masterData.length);
     if(index < masterData.length - 1) {
       index++;
       data = masterData[index];
+      window.location.hash = index;
+
+      console.log('data, index');
+      console.log(data);
+      console.log(index);
       this.props.onNextClick({data: data, choice: ''});
       this.setState({data: data, choice: ''});
     } else {
@@ -107,7 +111,7 @@ var Item = React.createClass({
   render: function() {
     var item = this.props.name.toLowerCase();
     return (
-      <div className={`item ${item}`} style={itemStyle} onClick={this.handleItemClick} >
+      <div className={`item ${item}`} onClick={this.handleItemClick} >
         <img src={`images/${this.props.image}`} alt={this.props.name} />
       </div>
     );
@@ -130,7 +134,7 @@ var ItemChoice = React.createClass({
       msg = 'Nope.';
     }
     return (
-      <div className="itemChoice" style={itemChoiceStyle}>
+      <div className="itemChoice">
         <h2>
           <span dangerouslySetInnerHTML={this.rawMarkup(msg)} />
         </h2>
@@ -175,10 +179,14 @@ var Hat = React.createClass({
 
 
 var HatBox = React.createClass({
+  getInitialState: function() {
+    return {data: data, choice: ''};
+  },
   render: function() {
     var hat = this.props.data.hat;
+    var hatClass = this.props.data.hat.name.toLowerCase();
     return (
-      <div className="hatBox" >
+      <div className={`hatBox ${hatClass}`} >
         <Hat choice={this.props.choice} image={hat.image} key={hat.id}>
           {hat.name}
         </Hat>
@@ -192,8 +200,6 @@ var MasterBox = React.createClass({
     return {data: data, choice: ''};
   },
   handleItemClick: function(state) {    
-    // console.log('In Box');
-    // console.log(item);
     this.setState(state);
   },
   handleBodyClick: function(e) {
@@ -205,17 +211,16 @@ var MasterBox = React.createClass({
     this.setState(state);
   },
   render: function() {
-    var hatClass = this.state.data.hat.name.toLowerCase();
     return (
       <div className="masterBox" onClick={this.handleBodyClick} >
         <h1>{this.state.data.q}</h1>
-        <div className={`wrapperBox ${hatClass}`}>
+        <div className="wrapperBox">
           <HatBox choice={this.state.choice} data={this.state.data} />
-          <div className="itemBox" style={itemListStyle}>
-            <Item name="Napkin" image="NAPKIN.gif" onItemClick={this.handleItemClick} />
-            <Item name="Spoon" image="SPOON.gif" onItemClick={this.handleItemClick} />
-            <Item name="Fork" image="FORK.gif" onItemClick={this.handleItemClick} />
-            <Item name="Knife" image="KNIFE.gif" onItemClick={this.handleItemClick} />
+          <div className="itemBox">
+            <Item name="Napkin" image="NAPKIN-2.gif" onItemClick={this.handleItemClick} />
+            <Item name="Spoon" image="SPOON-2.gif" onItemClick={this.handleItemClick} />
+            <Item name="Fork" image="FORK-2.gif" onItemClick={this.handleItemClick} />
+            <Item name="Knife" image="KNIFE-2.gif" onItemClick={this.handleItemClick} />
           </div>
         </div>
         <ItemChoice choice={this.state.choice} data={this.state.data} />
