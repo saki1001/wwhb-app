@@ -5,17 +5,17 @@ var wrapperBoxStyle = {
 };
 
 var itemBoxStyle = {
-  width: '485px',
+  width: 'auto',
   margin: '40px auto',
   overflow: 'hidden',
-  clear: 'both'
+  clear: 'both',
+  display: 'inline-block'
 };
 
 var itemStyle = {
   position: 'relative',
   background: 'none',
-  marginLeft: '5%',
-  marginRight: '4%',
+  marginBottom: '40px',
   cursor: 'default',
   top: 0,
   left: 0,
@@ -50,7 +50,7 @@ var Item = React.createClass({
 var MasterBox = React.createClass({
   render: function() {
     return (
-      <div className="masterBox">
+      <div className="masterBox begin">
         <h1>Who Wears Hat Best?</h1>
         <div className="wrapperBox" style={wrapperBoxStyle} >
           <NextButton />

@@ -222,15 +222,15 @@ ul {
  =================*/
 .item {
   color: black;
-  textAlign: center;
+  text-align: center;
   cursor: pointer;
 }
 
 .itemChoice {
   width: 100%;
-  textAlign: center;
-  'float': none;
-  'clear': both;
+  text-align: center;
+  float: none;
+  clear: both;
 }
 
 .itemBox {
@@ -281,6 +281,25 @@ ul {
   left: 71%;
 }
 
+
+/*=================
+ * BEGIN PAGE
+ =================*/
+.begin .item.spoon,
+.begin .item.fork,
+.begin .item.knife {
+  margin-right: 40px;
+}
+
+@media all and (max-width: 520px) and (min-width: 0) {
+  .begin .item.fork {
+    margin-right: 0;
+  }
+
+  .begin .item.knife {
+    clear: left;
+  }
+}
 
 /*=================
  * NEXT BUTTON
